@@ -46,6 +46,8 @@ namespace FinalProject
                 string userDateTime = tokens[6];
                 DateTime oDate = Convert.ToDateTime(userDateTime);
 
+                //Tokens' order is : First Name, Last Name, Address, Phone Number, Blood Type, Unknown, Last Given Date?, Email, Password
+
                 Donors.Add( new Donor(tokens[0], tokens[1], tokens[2], tokens[3], bType, tokens[5], oDate, tokens[7], tokens[8]));
                     count++;
                 }
