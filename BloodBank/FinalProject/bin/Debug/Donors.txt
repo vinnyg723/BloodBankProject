@@ -25,4 +25,3 @@ Nick,Schmitt,8167 Briarhaven Trail Apt. 64 St. Louis MO 63123,6186157777,B_POSIT
 Joslynn,Abernathy,8167 Briarhaven Trail Apt. 98 St. Louis MO 63123,5488864425,O_POSITIVE,none,12/31/2015,JoslynnAbernathy@gmail.com,JoslynnAbernathy
 Cami,White,8167 Briarhaven Trail Apt. 33 St. Louis MO 63123,5534559974,AB_NEGATIVE,none,12/31/2015,CamiWhite@gmail.com,CamiWhite
 Hippy,Jilly,127 Maple Rd,127 Maple Rd,AB_POSITIVE,none,5/4/2020 12:00:00 AM,hippy@gmail.com,1
-
