@@ -26,6 +26,7 @@ namespace FinalProject
             ReadFile("Donors.txt", Donors);
         }
 
+        //Vincents Sample Commit
 
         private void ReadFile(string fileName, List<Donor> Donors)
         {
