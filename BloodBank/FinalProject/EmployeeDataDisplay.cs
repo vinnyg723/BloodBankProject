@@ -15,7 +15,7 @@ namespace FinalProject
     {
         int aPos, aNeg, bPos, bNeg, oPos, oNeg, abPos, abNeg = 0;
 
-
+        List<Donor> Donors = new List<Donor>();
 
         private void btnDonateToday_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,6 @@ namespace FinalProject
             }
         }
 
-        List<Donor> Donors = new List<Donor>();
 
         public EmployeeDataDisplay()
         {
