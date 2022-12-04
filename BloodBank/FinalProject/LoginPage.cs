@@ -56,7 +56,7 @@ namespace FinalProject
 
         private void Login(string emailUserInput, string passwordInput, bool employeeLogin)
         {
-
+            lblLoginErrorOutput.Text = "";
             if (employeeLogin == true)
             {
                 for (int i = 0; i < Employees.Count; i++)
@@ -68,7 +68,7 @@ namespace FinalProject
                     }
                     else
                     {
-                        MessageBox.Show("Employee Account not found.");
+                        lblLoginErrorOutput.Text = "No Employee Found.";
                     }
                 }
             }
@@ -103,7 +103,7 @@ namespace FinalProject
 
                 if (found == false)
                 {
-                    MessageBox.Show("Donor Account not found.");
+                    lblLoginErrorOutput.Text = "No Donor Found.";
                 }
             }
         }
