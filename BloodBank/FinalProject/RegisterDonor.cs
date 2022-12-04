@@ -79,7 +79,7 @@ namespace FinalProject
         {
             int height;
             int weight;
-            
+            lblDonorCheckError.Text = "";
 
             if (rdoOfAgeYes.Checked)
             {
