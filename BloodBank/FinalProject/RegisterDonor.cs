@@ -79,37 +79,44 @@ namespace FinalProject
         {
             int height;
             int weight;
+            
 
-            if(int.TryParse((txtHeight.Text), out height))
+            if (rdoOfAgeYes.Checked)
             {
-                if(int.TryParse((txtWeight.Text), out weight))
+                //trying to figure out how to make the check easier to read for selected options
+
+                if (int.TryParse((txtHeight.Text), out height))
                 {
-                    if(rdoMale.Checked && rdoYes.Checked && height >= 60 && weight >= 110)
+                    if (int.TryParse((txtWeight.Text), out weight))
                     {
-                        lblOutputAccepted.Text = "Congratulations! You meet the requirements to donate.";
-                        gbDonorInfo.Visible = true;
-                    }
-                    else if (rdoFemale.Checked && rdoYes.Checked && height >= 65 && weight >= 110)
-                    {
-                        lblOutputAccepted.Text = "Congratulations! You meet the requirements to donate.";
-                        gbDonorInfo.Visible = true;
+                        if (rdoMale.Checked && height >= 60 && weight >= 110 || rdoFemale.Checked && height >= 65 && weight >= 110)
+                        {
+                            lblOutputAccepted.Text = "Congratulations! You meet the requirements to donate.";
+                            gbDonorInfo.Visible = true;
+                        }
+                        else
+                        {
+                            lblOutputAccepted.Text = "You do not meet the requirements to donate.";
+                            gbDonorInfo.Visible = false;
+                        }
                     }
                     else
                     {
-                        lblOutputAccepted.Text = "You do not meet the requirements to donate.";
-                        gbDonorInfo.Visible = false;
+                        lblDonorCheckError.Text = "Invalid Weight Entered.";
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Weight Entered.");
+                    lblDonorCheckError.Text = "Invalid Height Entered.";
                 }
+
             }
             else
             {
-                MessageBox.Show("Invalid Height Entered.");
+                lblDonorCheckError.Text = "You are not of age to donate.";
             }
-
+            
+            
 
 
         }

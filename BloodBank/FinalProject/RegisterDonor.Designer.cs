@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterDonor));
             this.label1 = new System.Windows.Forms.Label();
-            this.rdoYes = new System.Windows.Forms.RadioButton();
-            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoOfAgeYes = new System.Windows.Forms.RadioButton();
+            this.rdoOfAgeNo = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.gbSex = new System.Windows.Forms.GroupBox();
             this.gbAge = new System.Windows.Forms.GroupBox();
             this.gbHeightWeight = new System.Windows.Forms.GroupBox();
+            this.lblDonorCheckError = new System.Windows.Forms.Label();
             this.gbDonorInfo.SuspendLayout();
             this.gbSex.SuspendLayout();
             this.gbAge.SuspendLayout();
@@ -80,31 +81,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Are you at least 16 years of age?";
             // 
-            // rdoYes
+            // rdoOfAgeYes
             // 
-            this.rdoYes.AutoSize = true;
-            this.rdoYes.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoYes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rdoYes.Location = new System.Drawing.Point(9, 41);
-            this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(44, 21);
-            this.rdoYes.TabIndex = 1;
-            this.rdoYes.TabStop = true;
-            this.rdoYes.Text = "Yes";
-            this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoOfAgeYes.AutoSize = true;
+            this.rdoOfAgeYes.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoOfAgeYes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rdoOfAgeYes.Location = new System.Drawing.Point(9, 41);
+            this.rdoOfAgeYes.Name = "rdoOfAgeYes";
+            this.rdoOfAgeYes.Size = new System.Drawing.Size(44, 21);
+            this.rdoOfAgeYes.TabIndex = 1;
+            this.rdoOfAgeYes.TabStop = true;
+            this.rdoOfAgeYes.Text = "Yes";
+            this.rdoOfAgeYes.UseVisualStyleBackColor = true;
             // 
-            // rdoNo
+            // rdoOfAgeNo
             // 
-            this.rdoNo.AutoSize = true;
-            this.rdoNo.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rdoNo.Location = new System.Drawing.Point(9, 64);
-            this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(43, 21);
-            this.rdoNo.TabIndex = 2;
-            this.rdoNo.TabStop = true;
-            this.rdoNo.Text = "No";
-            this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoOfAgeNo.AutoSize = true;
+            this.rdoOfAgeNo.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoOfAgeNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rdoOfAgeNo.Location = new System.Drawing.Point(9, 64);
+            this.rdoOfAgeNo.Name = "rdoOfAgeNo";
+            this.rdoOfAgeNo.Size = new System.Drawing.Size(43, 21);
+            this.rdoOfAgeNo.TabIndex = 2;
+            this.rdoOfAgeNo.TabStop = true;
+            this.rdoOfAgeNo.Text = "No";
+            this.rdoOfAgeNo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -161,7 +162,7 @@
             this.lblOutputAccepted.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblOutputAccepted.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutputAccepted.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblOutputAccepted.Location = new System.Drawing.Point(355, 16);
+            this.lblOutputAccepted.Location = new System.Drawing.Point(427, 20);
             this.lblOutputAccepted.Name = "lblOutputAccepted";
             this.lblOutputAccepted.Size = new System.Drawing.Size(341, 205);
             this.lblOutputAccepted.TabIndex = 8;
@@ -188,9 +189,9 @@
             this.gbDonorInfo.Controls.Add(this.label7);
             this.gbDonorInfo.Controls.Add(this.label6);
             this.gbDonorInfo.Controls.Add(this.label5);
-            this.gbDonorInfo.Location = new System.Drawing.Point(12, 233);
+            this.gbDonorInfo.Location = new System.Drawing.Point(42, 299);
             this.gbDonorInfo.Name = "gbDonorInfo";
-            this.gbDonorInfo.Size = new System.Drawing.Size(684, 164);
+            this.gbDonorInfo.Size = new System.Drawing.Size(708, 164);
             this.gbDonorInfo.TabIndex = 9;
             this.gbDonorInfo.TabStop = false;
             this.gbDonorInfo.Visible = false;
@@ -357,7 +358,7 @@
             // 
             this.btnCheck.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.Red;
-            this.btnCheck.Location = new System.Drawing.Point(249, 146);
+            this.btnCheck.Location = new System.Drawing.Point(284, 146);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(100, 49);
             this.btnCheck.TabIndex = 10;
@@ -418,8 +419,8 @@
             // 
             this.gbAge.BackColor = System.Drawing.Color.Transparent;
             this.gbAge.Controls.Add(this.label1);
-            this.gbAge.Controls.Add(this.rdoYes);
-            this.gbAge.Controls.Add(this.rdoNo);
+            this.gbAge.Controls.Add(this.rdoOfAgeYes);
+            this.gbAge.Controls.Add(this.rdoOfAgeNo);
             this.gbAge.Location = new System.Drawing.Point(12, 4);
             this.gbAge.Name = "gbAge";
             this.gbAge.Size = new System.Drawing.Size(210, 100);
@@ -440,12 +441,22 @@
             this.gbHeightWeight.TabIndex = 16;
             this.gbHeightWeight.TabStop = false;
             // 
+            // lblDonorCheckError
+            // 
+            this.lblDonorCheckError.AutoSize = true;
+            this.lblDonorCheckError.BackColor = System.Drawing.Color.Transparent;
+            this.lblDonorCheckError.Location = new System.Drawing.Point(281, 223);
+            this.lblDonorCheckError.Name = "lblDonorCheckError";
+            this.lblDonorCheckError.Size = new System.Drawing.Size(0, 13);
+            this.lblDonorCheckError.TabIndex = 17;
+            // 
             // RegisterDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(708, 407);
+            this.ClientSize = new System.Drawing.Size(804, 486);
+            this.Controls.Add(this.lblDonorCheckError);
             this.Controls.Add(this.gbHeightWeight);
             this.Controls.Add(this.gbAge);
             this.Controls.Add(this.gbSex);
@@ -463,14 +474,15 @@
             this.gbHeightWeight.ResumeLayout(false);
             this.gbHeightWeight.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rdoYes;
-        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoOfAgeYes;
+        private System.Windows.Forms.RadioButton rdoOfAgeNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -502,5 +514,6 @@
         private System.Windows.Forms.GroupBox gbAge;
         private System.Windows.Forms.GroupBox gbHeightWeight;
         private System.Windows.Forms.ComboBox cboBloodType;
+        private System.Windows.Forms.Label lblDonorCheckError;
     }
 }
