@@ -196,7 +196,7 @@ namespace FinalProject
 
             if(lblOutputDonors.Text == "")
             {
-                MessageBox.Show("No Donors Found");
+                lblOutputDonors.Text = "Please Enter a Valid Donor Name or Email.";
             }
         }
 
