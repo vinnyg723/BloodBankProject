@@ -464,6 +464,7 @@
             this.Controls.Add(this.gbDonorInfo);
             this.Controls.Add(this.lblOutputAccepted);
             this.Name = "RegisterDonor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Donor";
             this.gbDonorInfo.ResumeLayout(false);
             this.gbDonorInfo.PerformLayout();

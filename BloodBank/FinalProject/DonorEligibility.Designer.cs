@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(496, 141);
             this.Controls.Add(this.gbOutputEligibility);
             this.Name = "DonorEligibility";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donation";
             this.gbOutputEligibility.ResumeLayout(false);
             this.gbOutputEligibility.PerformLayout();

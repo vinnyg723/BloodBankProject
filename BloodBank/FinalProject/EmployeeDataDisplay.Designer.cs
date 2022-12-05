@@ -144,6 +144,7 @@
             this.Controls.Add(this.txtSearchDonors);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeDataDisplay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donations";
             ((System.ComponentModel.ISupportInitialize)(this.chtBloodTypes)).EndInit();
             this.ResumeLayout(false);
