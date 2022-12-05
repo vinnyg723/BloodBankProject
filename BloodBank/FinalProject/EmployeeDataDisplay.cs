@@ -152,6 +152,8 @@ namespace FinalProject
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+
+            //need to check first name or email?
             lblOutputDonors.Text = "";
             string searchedDonor = txtSearchDonors.Text;
 
@@ -194,7 +196,7 @@ namespace FinalProject
                 }
             }
 
-            if(lblOutputDonors.Text == "")
+            if(searchedDonor == "")
             {
                 lblOutputDonors.Text = "Please Enter a Valid Donor Name or Email.";
             }
