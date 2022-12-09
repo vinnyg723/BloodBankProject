@@ -84,7 +84,7 @@
             this.btnLogin.Location = new System.Drawing.Point(175, 110);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(104, 23);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -98,7 +98,7 @@
             this.chkEmployee.Location = new System.Drawing.Point(175, 83);
             this.chkEmployee.Name = "chkEmployee";
             this.chkEmployee.Size = new System.Drawing.Size(117, 21);
-            this.chkEmployee.TabIndex = 6;
+            this.chkEmployee.TabIndex = 4;
             this.chkEmployee.Text = "Employee Login";
             this.chkEmployee.UseVisualStyleBackColor = false;
             // 
