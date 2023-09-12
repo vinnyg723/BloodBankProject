@@ -27,7 +27,6 @@ C:\Users\Vinny\Desktop\PersonalProjects-Coding\BloodBankProject\BloodBank\FinalP
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\bin\Debug\FinalProject.exe.config
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\bin\Debug\FinalProject.exe
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\bin\Debug\FinalProject.pdb
-C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.csprojAssemblyReference.cache
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.LoginPage.resources
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.EmployeeDataDisplay.resources
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.DonorEligibility.resources
@@ -37,3 +36,4 @@ C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.exe
 C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\corey\Desktop\Personal Projects\BloodBankProject\BloodBank\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache

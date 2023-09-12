@@ -102,12 +102,12 @@ namespace FinalProject
                     }
                     else
                     {
-                        lblDonorCheckError.Text = "Invalid Weight Entered.";
+                        lblDonorCheckError.Text = "Please enter a weight.";
                     }
                 }
                 else
                 {
-                    lblDonorCheckError.Text = "Invalid Height Entered.";
+                    lblDonorCheckError.Text = "Please enter a height.";
                 }
 
             }
