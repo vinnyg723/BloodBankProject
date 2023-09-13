@@ -27,6 +27,8 @@ namespace FinalProject
             _phoneNumber = phoneNumber;
 
             _userBlood = userBlood;
+
+            //Do we need _bloodInfo?
             _bloodInfo = bloodInfo;
             _donationDate = donationDate;
 

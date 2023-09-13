@@ -11,11 +11,18 @@ namespace FinalProject
 
         private string _username;
         private string _password;
+        private string _firstName;
+        private string _lastName;
+        
 
-        public Employee(string username, string password)
+
+        public Employee(string username, string password, string firstName, string lastName)
         {
             _username = username;
             _password = password;
+            _firstName = firstName;
+            _lastName = lastName;
+            
         }
 
         public string GetUserName()
@@ -27,5 +34,18 @@ namespace FinalProject
         {
             return _password;
         }
+
+        public string GetEmployeeFirstName()
+        {
+            return _firstName;
+        }
+
+        public string GetEmployeeLastName()
+        {
+            return _lastName;
+        }
+
+      
+
     }
 }

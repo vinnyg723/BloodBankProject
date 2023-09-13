@@ -21,7 +21,7 @@ namespace FinalProject
         public LoginPage()
         {
             InitializeComponent();
-            Employees.Add(new Employee("Employee1", "12345"));
+            Employees.Add(new Employee("Employee1", "12345", "George", "Smith"));
         
             //working on removing the file read and use a database instead
             //ReadFile("Donors.txt", Donors);
