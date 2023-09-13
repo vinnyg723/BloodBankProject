@@ -23,10 +23,12 @@ namespace FinalProject
             InitializeComponent();
             Employees.Add(new Employee("Employee1", "12345"));
         
-            ReadFile("Donors.txt", Donors);
+            //working on removing the file read and use a database instead
+            //ReadFile("Donors.txt", Donors);
+           
         }
 
-        private void ReadFile(string fileName, List<Donor> Donors)
+       /* private void ReadFile(string fileName, List<Donor> Donors)
         {
             char[] delim = { ',' };
             int count = 0;
@@ -50,7 +52,7 @@ namespace FinalProject
                 catalogFile.Close();
 
 
-        }
+        }*/
 
 
 
