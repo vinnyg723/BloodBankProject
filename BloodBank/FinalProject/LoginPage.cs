@@ -65,6 +65,11 @@ namespace FinalProject
                 {
                     if (emailUserInput == Employees[i].GetUsername().ToString() && passwordInput == Employees[i].GetPassword().ToString())
                     {
+                        lblLoginErrorOutput.Text = "";
+                        txtEmailLogin.Text = "";
+                        txtPasswordLogin.Text = "";
+                        chkEmployee.Checked = false;
+
                         EmployeeDataDisplay employeeDataDisplayPage = new EmployeeDataDisplay();
                         employeeDataDisplayPage.ShowDialog();
                     }
@@ -84,7 +89,12 @@ namespace FinalProject
                     if (emailUserInput.Equals(Donors[i].GetEmail().ToString()) && passwordInput == (Donors[i].GetPassword().ToString()))
                     {
                         found = true;
-                        string donorsName = Donors[i].GetFirstName();
+                        string donorsName = Donors[i].GetFirstName() + " " + Donors[i].GetLastName();
+
+                        lblLoginErrorOutput.Text = "";
+                        txtEmailLogin.Text = "";
+                        txtPasswordLogin.Text = "";
+                        
 
                         DateTime date1 = Donors[i].GetDonationDate();
                         DateTime date2 = DateTime.Now;

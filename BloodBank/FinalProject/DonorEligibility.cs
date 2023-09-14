@@ -16,7 +16,8 @@ namespace FinalProject
         {
             InitializeComponent();
 
-            lblEligibility.Text = "Hello " + donorsName + ", you are " + donorEligibility + " to donate blood today.";
+            lblWelcomeUser.Text = "Welcome " + donorsName + "!";
+            lblEligibility.Text = "You are " + donorEligibility + " to donate blood today.";
         }
     }
 }
