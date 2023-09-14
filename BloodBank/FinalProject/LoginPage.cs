@@ -24,35 +24,35 @@ namespace FinalProject
             Employees.Add(new Employee("Employee1", "12345", "George", "Smith"));
         
             //working on removing the file read and use a database instead
-            //ReadFile("Donors.txt", Donors);
+            ReadFile("Donors.txt", Donors);
            
         }
 
-       /* private void ReadFile(string fileName, List<Donor> Donors)
+        private void ReadFile(string fileName, List<Donor> Donors)
         {
             char[] delim = { ',' };
             int count = 0;
             StreamReader catalogFile;
 
-                catalogFile = File.OpenText(fileName);
-                while (!catalogFile.EndOfStream)
-                {
-                    string line = catalogFile.ReadLine();
-                    string[] tokens = line.Split(delim);
+            catalogFile = File.OpenText(fileName);
+            while (!catalogFile.EndOfStream)
+            {
+                string line = catalogFile.ReadLine();
+                string[] tokens = line.Split(delim);
 
-                    string bloodType = tokens[4];
-                    BloodType bType = (BloodType)Enum.Parse(typeof(BloodType), bloodType);
+                string bloodType = tokens[4];
+                BloodType bType = (BloodType)Enum.Parse(typeof(BloodType), bloodType);
 
                 string userDateTime = tokens[6];
                 DateTime oDate = Convert.ToDateTime(userDateTime);
 
-                Donors.Add( new Donor(tokens[0], tokens[1], tokens[2], tokens[3], bType, tokens[5], oDate, tokens[7], tokens[8]));
-                    count++;
-                }
-                catalogFile.Close();
+                Donors.Add(new Donor(tokens[0], tokens[1], tokens[2], tokens[3], bType, tokens[5], oDate, tokens[7], tokens[8]));
+                count++;
+            }
+            catalogFile.Close();
 
 
-        }*/
+        }
 
 
 
@@ -63,7 +63,7 @@ namespace FinalProject
             {
                 for (int i = 0; i < Employees.Count; i++)
                 {
-                    if (emailUserInput == Employees[i].GetUserName().ToString() && passwordInput == Employees[i].GetPassword().ToString())
+                    if (emailUserInput == Employees[i].GetUsername().ToString() && passwordInput == Employees[i].GetPassword().ToString())
                     {
                         EmployeeDataDisplay employeeDataDisplayPage = new EmployeeDataDisplay();
                         employeeDataDisplayPage.ShowDialog();

@@ -25,7 +25,7 @@ namespace FinalProject
             
         }
 
-        public string GetUserName()
+        public string GetUsername()
         {
             return _username;
         }

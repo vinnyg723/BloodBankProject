@@ -193,7 +193,9 @@ namespace FinalProject
                            "Email: " + Donors[i].GetEmail() + "\n" +
                            "Eligible to donate today? " + donorEligibility + "\n\n";
                     }
-                }
+                }/*else{
+                    lblOutputDonors.Text = "Donor Not Found.";
+                }*/
             }
 
             if(searchedDonor == "")
