@@ -16,6 +16,7 @@ namespace FinalProject
         int aPos, aNeg, bPos, bNeg, oPos, oNeg, abPos, abNeg = 0;
 
         List<Donor> Donors = new List<Donor>();
+        string searchedDonor;
 
         private void btnDonateToday_Click(object sender, EventArgs e)
         {
@@ -155,13 +156,18 @@ namespace FinalProject
 
             //need to check first name or email?
             lblOutputDonors.Text = "";
-            string searchedDonor = txtSearchDonors.Text;
+            searchedDonor = txtSearchDonors.Text;
+            int donorFound = 0;
+           
+
+
 
             for (int i = 0; i < Donors.Count; i++)
             {
                 if (searchedDonor == Donors[i].GetFirstName() || searchedDonor == Donors[i].GetBloodType().ToString())
                 {
                     string donorEligibility = "No";
+                    donorFound++;
 
                     DateTime date1 = Donors[i].GetDonationDate();
                     DateTime date2 = DateTime.Now;
@@ -187,22 +193,24 @@ namespace FinalProject
                     {
                         lblOutputDonors.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + "\n" +
                            "Previous Donation: " + Donors[i].GetDonationDate().ToString("d") + "\n" +
-                           "Blood-Type: " + Donors[i].GetBloodType() + "\n" + 
+                           "Blood-Type: " + Donors[i].GetBloodType() + "\n" +
                            "Blood-Info: " + Donors[i].GetInfo() + "\n" +
                            "Address: " + Donors[i].GetAddress() + "\n" +
                            "Email: " + Donors[i].GetEmail() + "\n" +
                            "Eligible to donate today? " + donorEligibility + "\n\n";
                     }
-                }/*else{
-                    lblOutputDonors.Text = "Donor Not Found.";
-                }*/
+                }
+                
             }
-
-            if(searchedDonor == "")
+            if (donorFound <= 0)
+            {
+                lblOutputDonors.Text = "No donor found.";
+            }
+            if (searchedDonor == "")
             {
                 lblOutputDonors.Text = "Please Enter a Valid Donor Name or Email.";
             }
         }
-
+       
     }
 }
