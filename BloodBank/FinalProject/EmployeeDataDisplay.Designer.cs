@@ -38,7 +38,8 @@
             this.lblOutputDonors = new System.Windows.Forms.Label();
             this.chtBloodTypes = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblLowBlood = new System.Windows.Forms.Label();
-            this.btnDonateToday = new System.Windows.Forms.Button();
+            this.lblResultTitle = new System.Windows.Forms.Label();
+            this.txtSearchResults = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chtBloodTypes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             this.lblOutputDonors.BackColor = System.Drawing.Color.Transparent;
             this.lblOutputDonors.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutputDonors.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblOutputDonors.Location = new System.Drawing.Point(27, 120);
+            this.lblOutputDonors.Location = new System.Drawing.Point(94, 109);
             this.lblOutputDonors.Name = "lblOutputDonors";
             this.lblOutputDonors.Size = new System.Drawing.Size(0, 18);
             this.lblOutputDonors.TabIndex = 3;
@@ -118,17 +119,26 @@
             this.lblLowBlood.Size = new System.Drawing.Size(0, 13);
             this.lblLowBlood.TabIndex = 5;
             // 
-            // btnDonateToday
+            // lblResultTitle
             // 
-            this.btnDonateToday.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonateToday.ForeColor = System.Drawing.Color.Red;
-            this.btnDonateToday.Location = new System.Drawing.Point(543, 409);
-            this.btnDonateToday.Name = "btnDonateToday";
-            this.btnDonateToday.Size = new System.Drawing.Size(136, 30);
-            this.btnDonateToday.TabIndex = 6;
-            this.btnDonateToday.Text = "Donate Today?";
-            this.btnDonateToday.UseVisualStyleBackColor = true;
-            this.btnDonateToday.Click += new System.EventHandler(this.btnDonateToday_Click);
+            this.lblResultTitle.AutoSize = true;
+            this.lblResultTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblResultTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultTitle.Location = new System.Drawing.Point(20, 127);
+            this.lblResultTitle.Name = "lblResultTitle";
+            this.lblResultTitle.Size = new System.Drawing.Size(124, 20);
+            this.lblResultTitle.TabIndex = 7;
+            this.lblResultTitle.Text = "Donor Results";
+            // 
+            // txtSearchResults
+            // 
+            this.txtSearchResults.Location = new System.Drawing.Point(24, 160);
+            this.txtSearchResults.Multiline = true;
+            this.txtSearchResults.Name = "txtSearchResults";
+            this.txtSearchResults.ReadOnly = true;
+            this.txtSearchResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSearchResults.Size = new System.Drawing.Size(385, 358);
+            this.txtSearchResults.TabIndex = 8;
             // 
             // EmployeeDataDisplay
             // 
@@ -136,7 +146,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(856, 530);
-            this.Controls.Add(this.btnDonateToday);
+            this.Controls.Add(this.txtSearchResults);
+            this.Controls.Add(this.lblResultTitle);
             this.Controls.Add(this.lblLowBlood);
             this.Controls.Add(this.chtBloodTypes);
             this.Controls.Add(this.lblOutputDonors);
@@ -160,6 +171,7 @@
         private System.Windows.Forms.Label lblOutputDonors;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtBloodTypes;
         private System.Windows.Forms.Label lblLowBlood;
-        private System.Windows.Forms.Button btnDonateToday;
+        private System.Windows.Forms.Label lblResultTitle;
+        private System.Windows.Forms.TextBox txtSearchResults;
     }
 }

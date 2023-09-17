@@ -18,6 +18,8 @@ namespace FinalProject
         List<Donor> Donors = new List<Donor>();
         string searchedDonor;
 
+
+
         private void btnDonateToday_Click(object sender, EventArgs e)
         {
             lblOutputDonors.Text = "";
@@ -37,10 +39,15 @@ namespace FinalProject
             }
         }
 
-
+       
         public EmployeeDataDisplay()
         {
+            
+            
             InitializeComponent();
+
+            lblResultTitle.Visible = false;
+            txtSearchResults.Visible = false;
 
             ReadFile("Donors.txt", Donors);
 
@@ -156,11 +163,12 @@ namespace FinalProject
 
             //need to check first name or email?
             lblOutputDonors.Text = "";
+            
             searchedDonor = txtSearchDonors.Text;
             int donorFound = 0;
-           
 
 
+            txtSearchResults.Clear();
 
             for (int i = 0; i < Donors.Count; i++)
             {
@@ -168,7 +176,8 @@ namespace FinalProject
                 {
                     string donorEligibility = "No";
                     donorFound++;
-
+                    lblResultTitle.Visible = true;
+                    txtSearchResults.Visible = true;
                     DateTime date1 = Donors[i].GetDonationDate();
                     DateTime date2 = DateTime.Now;
 
@@ -182,22 +191,35 @@ namespace FinalProject
 
                     if (Donors[i].GetInfo() == "none")
                     {
-                        lblOutputDonors.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + "\n" +
+                            txtSearchResults.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + Environment.NewLine +
+                            "Previous Donation: " + Donors[i].GetDonationDate().ToString("d") + Environment.NewLine +
+                            "Blood-Type: " + Donors[i].GetBloodType() + Environment.NewLine +
+                            "Address: " + Donors[i].GetAddress() + Environment.NewLine +
+                            "Email: " + Donors[i].GetEmail() + Environment.NewLine +
+                            "Eligible to donate today? " + donorEligibility + Environment.NewLine + Environment.NewLine;
+                        /*lblOutputDonors.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + "\n" +
                             "Previous Donation: " + Donors[i].GetDonationDate().ToString("d") + "\n" +
                             "Blood-Type: " + Donors[i].GetBloodType() + "\n" +
                             "Address: " + Donors[i].GetAddress() + "\n" +
                             "Email: " + Donors[i].GetEmail() + "\n" +
-                            "Eligible to donate today? " + donorEligibility + "\n\n";
+                            "Eligible to donate today? " + donorEligibility + "\n\n";*/
                     }
                     else
                     {
-                        lblOutputDonors.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + "\n" +
+                            txtSearchResults.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + Environment.NewLine +
+                           "Previous Donation: " + Donors[i].GetDonationDate().ToString("d") + Environment.NewLine +
+                           "Blood-Type: " + Donors[i].GetBloodType() + Environment.NewLine +
+                           "Blood-Info: " + Donors[i].GetInfo() + Environment.NewLine +
+                           "Address: " + Donors[i].GetAddress() + Environment.NewLine +
+                           "Email: " + Donors[i].GetEmail() + Environment.NewLine +
+                           "Eligible to donate today? " + donorEligibility + Environment.NewLine + Environment.NewLine;
+                       /* lblOutputDonors.Text += "Donor Name: " + Donors[i].GetFirstName() + " " + Donors[i].GetLastName() + "\n" +
                            "Previous Donation: " + Donors[i].GetDonationDate().ToString("d") + "\n" +
                            "Blood-Type: " + Donors[i].GetBloodType() + "\n" +
                            "Blood-Info: " + Donors[i].GetInfo() + "\n" +
                            "Address: " + Donors[i].GetAddress() + "\n" +
                            "Email: " + Donors[i].GetEmail() + "\n" +
-                           "Eligible to donate today? " + donorEligibility + "\n\n";
+                           "Eligible to donate today? " + donorEligibility + "\n\n";*/
                     }
                 }
                 
@@ -205,6 +227,8 @@ namespace FinalProject
             if (donorFound <= 0)
             {
                 lblOutputDonors.Text = "No donor found.";
+                txtSearchResults.Visible = false;
+                lblResultTitle.Visible = false;
             }
             if (searchedDonor == "")
             {
