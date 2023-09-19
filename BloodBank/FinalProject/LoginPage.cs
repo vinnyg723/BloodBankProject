@@ -128,8 +128,16 @@ namespace FinalProject
 
             Login(emailInput, passwordInput, employeeLogin);
         }
+        
 
-        private void lblNewDonor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        /*private void lblNewDonor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegisterDonor registerDonorPage = new RegisterDonor();
+            registerDonorPage.ShowDialog();
+        }*/
+
+        private void btnNewDonor_Click(object sender, EventArgs e)
         {
             this.Hide();
             RegisterDonor registerDonorPage = new RegisterDonor();
