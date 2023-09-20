@@ -166,8 +166,8 @@
             this.lblOutputAccepted.Name = "lblOutputAccepted";
             this.lblOutputAccepted.Size = new System.Drawing.Size(341, 205);
             this.lblOutputAccepted.TabIndex = 8;
-            this.lblOutputAccepted.Text = "Congradulations / Decliened";
             this.lblOutputAccepted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblOutputAccepted.Visible = false;
             // 
             // gbDonorInfo
             // 

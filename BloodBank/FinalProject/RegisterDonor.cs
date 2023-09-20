@@ -14,6 +14,7 @@ namespace FinalProject
     public partial class RegisterDonor : Form
     {
         List<Donor> Donors;
+        
 
         public RegisterDonor()
         {
@@ -66,7 +67,7 @@ namespace FinalProject
 
                     fileName.WriteLine(donor.GetFirstName() +","+ donor.GetLastName() + "," + donor.GetAddress() + "," + donor.GetAddress() + "," + bType + "," + "none" + "," + dateHolder + "," + donor.GetEmail() + "," + donor.GetPassword());
                     fileName.Close();
-                    MessageBox.Show("Thank you for your donation.");
+                    MessageBox.Show("Thank you for signing up.");
 
                     this.Hide();
                     LoginPage loginPage = new LoginPage();
@@ -79,36 +80,47 @@ namespace FinalProject
         {
             int height;
             int weight;
+            
             lblDonorCheckError.Text = "";
+            lblOutputAccepted.Visible = false;
 
             if (rdoOfAgeYes.Checked)
             {
-                //trying to figure out how to make the check easier to read for selected options
-
-                if (int.TryParse((txtHeight.Text), out height))
+                if (rdoMale.Checked == true || rdoFemale.Checked == true)
                 {
-                    if (int.TryParse((txtWeight.Text), out weight))
+                    //trying to figure out how to make the check easier to read for selected options
+
+                    if (int.TryParse(txtHeight.Text, out height))
                     {
-                        if (rdoMale.Checked && height >= 60 && weight >= 110 || rdoFemale.Checked && height >= 65 && weight >= 110)
+                        if (int.TryParse(txtWeight.Text, out weight))
                         {
-                            lblOutputAccepted.Text = "Congratulations! You meet the requirements to donate.";
-                            gbDonorInfo.Visible = true;
+                            lblOutputAccepted.Visible = true;
+                            if (rdoMale.Checked && height >= 60 && weight >= 110 || rdoFemale.Checked && height >= 65 && weight >= 110)
+                            {
+                                lblOutputAccepted.Text = "Congratulations! You meet the requirements to donate.";
+                                gbDonorInfo.Visible = true;
+                            }
+                            else
+                            {
+                                lblOutputAccepted.Text = "You do not meet the requirements to donate.";
+                                gbDonorInfo.Visible = false;
+                            }
                         }
                         else
                         {
-                            lblOutputAccepted.Text = "You do not meet the requirements to donate.";
-                            gbDonorInfo.Visible = false;
+                             lblDonorCheckError.Text = "Please enter a weight.";
                         }
                     }
                     else
                     {
-                        lblDonorCheckError.Text = "Please enter a weight.";
+                        lblDonorCheckError.Text = "Please enter a height.";
                     }
                 }
                 else
                 {
-                    lblDonorCheckError.Text = "Please enter a height.";
+                    lblDonorCheckError.Text = "Are you male or female?";
                 }
+               
 
             }
             else

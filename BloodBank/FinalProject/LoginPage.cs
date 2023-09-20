@@ -70,8 +70,10 @@ namespace FinalProject
                         txtPasswordLogin.Text = "";
                         chkEmployee.Checked = false;
 
+                        
                         EmployeeDataDisplay employeeDataDisplayPage = new EmployeeDataDisplay();
                         employeeDataDisplayPage.ShowDialog();
+                        
                     }
                     else
                     {
@@ -108,8 +110,10 @@ namespace FinalProject
                         }
 
                         //Display Form on Login
+                        
                         DonorEligibility donorEligibilityPage = new DonorEligibility(donorsName, donorEligibility);
                         donorEligibilityPage.ShowDialog();
+                       
                     }
                 }
 
@@ -126,6 +130,7 @@ namespace FinalProject
             string passwordInput = txtPasswordLogin.Text;
             bool employeeLogin = chkEmployee.Checked;
 
+            
             Login(emailInput, passwordInput, employeeLogin);
         }
         
