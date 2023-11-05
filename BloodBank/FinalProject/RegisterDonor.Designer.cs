@@ -66,7 +66,7 @@
             this.lblDonorCheckError = new System.Windows.Forms.Label();
             this.btnNewEmployee = new System.Windows.Forms.Button();
             this.lblEmployeeCode = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmployeeCode = new System.Windows.Forms.TextBox();
             this.chkboxRegisterEmployee = new System.Windows.Forms.CheckBox();
             this.gbDonorInfo.SuspendLayout();
             this.gbSex.SuspendLayout();
@@ -177,7 +177,7 @@
             // 
             this.gbDonorInfo.BackColor = System.Drawing.Color.Transparent;
             this.gbDonorInfo.Controls.Add(this.chkboxRegisterEmployee);
-            this.gbDonorInfo.Controls.Add(this.textBox1);
+            this.gbDonorInfo.Controls.Add(this.txtEmployeeCode);
             this.gbDonorInfo.Controls.Add(this.lblEmployeeCode);
             this.gbDonorInfo.Controls.Add(this.btnNewEmployee);
             this.gbDonorInfo.Controls.Add(this.cboBloodType);
@@ -468,6 +468,7 @@
             this.btnNewEmployee.TabIndex = 17;
             this.btnNewEmployee.Text = "Register Employee";
             this.btnNewEmployee.UseVisualStyleBackColor = true;
+            this.btnNewEmployee.Visible = false;
             // 
             // lblEmployeeCode
             // 
@@ -479,13 +480,15 @@
             this.lblEmployeeCode.Size = new System.Drawing.Size(91, 16);
             this.lblEmployeeCode.TabIndex = 18;
             this.lblEmployeeCode.Text = "Employee Code: ";
+            this.lblEmployeeCode.Visible = false;
             // 
-            // textBox1
+            // txtEmployeeCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(516, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 19;
+            this.txtEmployeeCode.Location = new System.Drawing.Point(516, 105);
+            this.txtEmployeeCode.Name = "txtEmployeeCode";
+            this.txtEmployeeCode.Size = new System.Drawing.Size(100, 20);
+            this.txtEmployeeCode.TabIndex = 19;
+            this.txtEmployeeCode.Visible = false;
             // 
             // chkboxRegisterEmployee
             // 
@@ -498,6 +501,7 @@
             this.chkboxRegisterEmployee.TabIndex = 20;
             this.chkboxRegisterEmployee.Text = "Register Employee";
             this.chkboxRegisterEmployee.UseVisualStyleBackColor = true;
+            this.chkboxRegisterEmployee.CheckedChanged += new System.EventHandler(this.chkboxRegisterEmployee_CheckedChanged);
             // 
             // RegisterDonor
             // 
@@ -566,7 +570,7 @@
         private System.Windows.Forms.ComboBox cboBloodType;
         private System.Windows.Forms.Label lblDonorCheckError;
         private System.Windows.Forms.CheckBox chkboxRegisterEmployee;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmployeeCode;
         private System.Windows.Forms.Label lblEmployeeCode;
         private System.Windows.Forms.Button btnNewEmployee;
     }
