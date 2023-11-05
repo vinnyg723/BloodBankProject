@@ -38,6 +38,7 @@
             this.lblLoginErrorOutput = new System.Windows.Forms.Label();
             this.lblNewUser = new System.Windows.Forms.Label();
             this.btnNewDonor = new System.Windows.Forms.Button();
+            this.btnNewEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,6 +127,8 @@
             // 
             // btnNewDonor
             // 
+            this.btnNewDonor.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewDonor.ForeColor = System.Drawing.Color.Red;
             this.btnNewDonor.Location = new System.Drawing.Point(153, 219);
             this.btnNewDonor.Name = "btnNewDonor";
             this.btnNewDonor.Size = new System.Drawing.Size(111, 44);
@@ -134,12 +137,24 @@
             this.btnNewDonor.UseVisualStyleBackColor = true;
             this.btnNewDonor.Click += new System.EventHandler(this.btnNewDonor_Click);
             // 
+            // btnNewEmployee
+            // 
+            this.btnNewEmployee.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewEmployee.ForeColor = System.Drawing.Color.Red;
+            this.btnNewEmployee.Location = new System.Drawing.Point(319, 240);
+            this.btnNewEmployee.Name = "btnNewEmployee";
+            this.btnNewEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnNewEmployee.TabIndex = 11;
+            this.btnNewEmployee.Text = "Employee";
+            this.btnNewEmployee.UseVisualStyleBackColor = true;
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(406, 288);
+            this.Controls.Add(this.btnNewEmployee);
             this.Controls.Add(this.btnNewDonor);
             this.Controls.Add(this.lblNewUser);
             this.Controls.Add(this.lblLoginErrorOutput);
@@ -168,6 +183,7 @@
         private System.Windows.Forms.Label lblLoginErrorOutput;
         private System.Windows.Forms.Label lblNewUser;
         private System.Windows.Forms.Button btnNewDonor;
+        private System.Windows.Forms.Button btnNewEmployee;
     }
 }
 

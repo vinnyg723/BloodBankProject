@@ -24,14 +24,6 @@ namespace FinalProject
             cboBloodType.SelectedIndex = 0;
 
 
-            if (chkboxRegisterEmployee.Checked == true)
-            {
-
-            }
-            else
-            {
-
-            }
         }
 
         public string[] GetBlood()
@@ -143,9 +135,6 @@ namespace FinalProject
 
         }
 
-        private void chkboxRegisterEmployee_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
