@@ -64,6 +64,10 @@
             this.gbAge = new System.Windows.Forms.GroupBox();
             this.gbHeightWeight = new System.Windows.Forms.GroupBox();
             this.lblDonorCheckError = new System.Windows.Forms.Label();
+            this.btnNewEmployee = new System.Windows.Forms.Button();
+            this.lblEmployeeCode = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chkboxRegisterEmployee = new System.Windows.Forms.CheckBox();
             this.gbDonorInfo.SuspendLayout();
             this.gbSex.SuspendLayout();
             this.gbAge.SuspendLayout();
@@ -172,6 +176,10 @@
             // gbDonorInfo
             // 
             this.gbDonorInfo.BackColor = System.Drawing.Color.Transparent;
+            this.gbDonorInfo.Controls.Add(this.chkboxRegisterEmployee);
+            this.gbDonorInfo.Controls.Add(this.textBox1);
+            this.gbDonorInfo.Controls.Add(this.lblEmployeeCode);
+            this.gbDonorInfo.Controls.Add(this.btnNewEmployee);
             this.gbDonorInfo.Controls.Add(this.cboBloodType);
             this.gbDonorInfo.Controls.Add(this.txtPhoneNumND);
             this.gbDonorInfo.Controls.Add(this.txtAddressND);
@@ -189,9 +197,9 @@
             this.gbDonorInfo.Controls.Add(this.label7);
             this.gbDonorInfo.Controls.Add(this.label6);
             this.gbDonorInfo.Controls.Add(this.label5);
-            this.gbDonorInfo.Location = new System.Drawing.Point(42, 299);
+            this.gbDonorInfo.Location = new System.Drawing.Point(42, 273);
             this.gbDonorInfo.Name = "gbDonorInfo";
-            this.gbDonorInfo.Size = new System.Drawing.Size(708, 164);
+            this.gbDonorInfo.Size = new System.Drawing.Size(708, 190);
             this.gbDonorInfo.TabIndex = 9;
             this.gbDonorInfo.TabStop = false;
             this.gbDonorInfo.Visible = false;
@@ -258,11 +266,11 @@
             // 
             this.btnRegister.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Red;
-            this.btnRegister.Location = new System.Drawing.Point(272, 113);
+            this.btnRegister.Location = new System.Drawing.Point(100, 139);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(121, 45);
+            this.btnRegister.Size = new System.Drawing.Size(175, 45);
             this.btnRegister.TabIndex = 8;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "Register Donor";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -450,6 +458,47 @@
             this.lblDonorCheckError.Size = new System.Drawing.Size(0, 13);
             this.lblDonorCheckError.TabIndex = 17;
             // 
+            // btnNewEmployee
+            // 
+            this.btnNewEmployee.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewEmployee.ForeColor = System.Drawing.Color.Red;
+            this.btnNewEmployee.Location = new System.Drawing.Point(424, 139);
+            this.btnNewEmployee.Name = "btnNewEmployee";
+            this.btnNewEmployee.Size = new System.Drawing.Size(192, 45);
+            this.btnNewEmployee.TabIndex = 17;
+            this.btnNewEmployee.Text = "Register Employee";
+            this.btnNewEmployee.UseVisualStyleBackColor = true;
+            // 
+            // lblEmployeeCode
+            // 
+            this.lblEmployeeCode.AutoSize = true;
+            this.lblEmployeeCode.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeCode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEmployeeCode.Location = new System.Drawing.Point(419, 107);
+            this.lblEmployeeCode.Name = "lblEmployeeCode";
+            this.lblEmployeeCode.Size = new System.Drawing.Size(91, 16);
+            this.lblEmployeeCode.TabIndex = 18;
+            this.lblEmployeeCode.Text = "Employee Code: ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(516, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 19;
+            // 
+            // chkboxRegisterEmployee
+            // 
+            this.chkboxRegisterEmployee.AutoSize = true;
+            this.chkboxRegisterEmployee.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkboxRegisterEmployee.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkboxRegisterEmployee.Location = new System.Drawing.Point(291, 105);
+            this.chkboxRegisterEmployee.Name = "chkboxRegisterEmployee";
+            this.chkboxRegisterEmployee.Size = new System.Drawing.Size(122, 20);
+            this.chkboxRegisterEmployee.TabIndex = 20;
+            this.chkboxRegisterEmployee.Text = "Register Employee";
+            this.chkboxRegisterEmployee.UseVisualStyleBackColor = true;
+            // 
             // RegisterDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,5 +565,9 @@
         private System.Windows.Forms.GroupBox gbHeightWeight;
         private System.Windows.Forms.ComboBox cboBloodType;
         private System.Windows.Forms.Label lblDonorCheckError;
+        private System.Windows.Forms.CheckBox chkboxRegisterEmployee;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblEmployeeCode;
+        private System.Windows.Forms.Button btnNewEmployee;
     }
 }
